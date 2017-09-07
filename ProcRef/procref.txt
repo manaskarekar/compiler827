@@ -1,0 +1,38 @@
+
+
+##Procedure Reference##
+
+                                    
+##+1+2+13+14+16   print the symbolic 4-tuples  ##
+			
+				
+PROGRAM   
+  DECLARATION
+    
+    INTEGER i;
+      
+  DECLARATION_END
+
+        PROCEDURE try{ REFERENCE INTEGER k}
+        DECLARATION
+	INTEGER i;
+DECLARATION_END
+
+        i <- 198;
+        PRINT i;        
+        
+        PROCEDURE_END
+        
+  
+  COMPUTE
+	
+        i <- 2;
+        PRINT i;
+        EXECUTE try {REFERENCE i};
+        PRINT i;
+	
+	
+  COMPUTE_END  
+  
+  PROGRAM_END
+

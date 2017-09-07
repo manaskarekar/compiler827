@@ -1,0 +1,59 @@
+						PRAGMATICS
+					Manas Karekar - mkareka@clemson.edu
+			             Yashodhan Fadnavis - yfadnav@clemson.edu
+					    Sun Apr 27 09:14:02 2008
+======================================================================================================
+## Matrix Addition##
+
+PROGRAM
+
+
+
+
+
+  DECLARATION
+
+  
+
+    INTEGER 2::2 a;
+
+    INTEGER i, j, temp;
+
+    
+
+  DECLARATION_END 
+
+
+
+  COMPUTE
+
+       
+
+       a[0:0] <- 1;
+
+       
+
+       a[0:1] <- 2;
+
+       
+
+       temp <- a[0:0];
+
+       j <- a[0:1];
+
+       a[1:1] <- j + temp;
+
+       
+
+       i <- a[1:1];
+
+       
+
+       PRINT i;
+
+
+
+  COMPUTE_END
+
+PROGRAM_END
+@

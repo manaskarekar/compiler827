@@ -1,0 +1,117 @@
+						PRAGMATICS
+					Manas Karekar - mkareka@clemson.edu
+			             Yashodhan Fadnavis - yfadnav@clemson.edu
+					    Sun Apr 27 09:12:10 2008
+======================================================================================================
+## bubble sort program##
+
+PROGRAM
+
+
+
+
+
+  DECLARATION
+
+  
+
+    INTEGER 7 a;
+
+    INTEGER i, j, temp;
+
+    
+
+  DECLARATION_END 
+
+
+
+  COMPUTE
+
+       a[0] <- 7;
+
+       a[1] <- 6;
+
+       a[2] <- 5;
+
+       a[3] <- 4;
+
+       a[4] <- 3;
+
+       a[5] <- 2;
+
+       a[6] <- 1;
+
+       
+
+       i <- 0;
+
+	 
+
+     WHILE i < 7 DO
+
+         j <- 0;
+
+         
+
+        WHILE j < 6 DO
+
+        
+
+            IF (a[j+1] < a[j]) THEN
+
+            
+
+                temp <- a[j+1];
+
+                a[j+1] <- a[j];
+
+	        a[j] <- temp;
+
+                
+
+            IF_END;
+
+            
+
+            j  <- j + 1;
+
+            
+
+            WHILE_END;
+
+            
+
+            i <- i + 1;
+
+            
+
+       WHILE_END;
+
+       
+
+    i <- 0;
+
+    
+
+    WHILE i < 7 DO
+
+    
+
+    temp <- a[i];
+
+    PRINT temp;
+
+    i <-i+1;
+
+    
+
+    WHILE_END;
+
+       
+
+
+
+  COMPUTE_END
+
+PROGRAM_END
+@

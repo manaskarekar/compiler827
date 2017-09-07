@@ -1,0 +1,158 @@
+						PRAGMATICS
+					Manas Karekar - mkareka@clemson.edu
+			             Yashodhan Fadnavis - yfadnav@clemson.edu
+					    Sun Apr 27 09:16:09 2008
+======================================================================================================
+
+
+
+
+##Procedure Reference##
+
+
+
+                                    
+
+##+1+2+13+14+16   print the symbolic 4-tuples  ##
+
+			
+
+				
+
+PROGRAM   
+
+  DECLARATION
+
+						Reduction 2--->(-,PROGRAMBEGIN,-,-)
+
+    
+
+    INTEGER i;
+
+						Reduction 11--->(i,MEMORY,-,-)
+
+      
+
+  DECLARATION_END
+
+
+
+        PROCEDURE try{ REFERENCE INTEGER k}
+
+						Reduction 5--->(-,DECLARATIONEND,-,-)
+
+						Reduction 23--->(try,PROCEDURE,-,-)
+
+						Reduction 28--->(-,BEGINPARAMETERLIST,-,-)
+
+						Reduction 28--->(k,FPARAMETER,-,-)
+
+        DECLARATION
+
+						Reduction 24--->(-,ENDFPARAMETERLIST,-,-)
+
+	INTEGER i;
+
+						Reduction 11--->(i,MEMORY,-,-)
+
+DECLARATION_END
+
+
+
+        i <- 198;
+
+						Reduction 5--->(-,DECLARATIONEND,-,-)
+
+						Reduction 76--->(i,SUBSTORE,198,-)
+
+        PRINT i;        
+
+						Reduction 55--->(PRINT,PROCEDURECALL,-,-)
+
+						Reduction 55--->(-,ACTUALPARAMETER,i,-)
+
+						Reduction 51--->(-,ENDACTUALPARAMETER,-,-)
+
+        
+
+        PROCEDURE_END
+
+        
+
+  
+
+  COMPUTE
+
+						Reduction 19--->(k,PROCEDUREEND,-,-)
+
+						Variable Symbol Table: 
+
+						Name | Type | Shape | No.Rows | No.Columns
+
+						k | integer | scalar | - | - |
+						i | integer | scalar | - | - |
+
+
+	
+
+        i <- 2;
+
+						Reduction 34--->(MAIN,LABEL,-,-)
+
+						Reduction 34--->(-,BEGINEXECUTION,-,-)
+
+						Reduction 76--->(i,SUBSTORE,2,-)
+
+        PRINT i;
+
+						Reduction 55--->(PRINT,PROCEDURECALL,-,-)
+
+						Reduction 55--->(-,ACTUALPARAMETER,i,-)
+
+						Reduction 51--->(-,ENDACTUALPARAMETER,-,-)
+
+        EXECUTE try {REFERENCE i};
+
+						Reduction 60--->(try,PROCEDURECALL,-,-)
+
+						Reduction 65--->(-,BEGINACTUALPARAMETERS,-,-)
+
+						Reduction 65--->(ref,ACTUALPARAMETER,i,-)
+
+						Reduction 65--->(-,refACTUALPARAMETER,i,-)
+
+						Reduction 61--->(-,ENDPARAMETERLIST,-,-)
+
+						Reduction 59--->(-,ENDOFCALL,-,-)
+
+        PRINT i;
+
+						Reduction 55--->(PRINT,PROCEDURECALL,-,-)
+
+						Reduction 55--->(-,ACTUALPARAMETER,i,-)
+
+						Reduction 51--->(-,ENDACTUALPARAMETER,-,-)
+
+	
+
+	
+
+  COMPUTE_END  
+
+  
+
+  PROGRAM_END
+
+						Reduction 33--->(-,ENDOFEXECUTION,-,-)
+
+
+
+@
+						Reduction 1--->(-,PROGRAMEND,-,-)
+
+						Final Symbol table is: 
+
+						Name | Type | Shape | No.Rows | No.Columns
+
+						i | integer | scalar | - | - |
+						try | PROCEDURE | - | - | - |
